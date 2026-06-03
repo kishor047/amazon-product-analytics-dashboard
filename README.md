@@ -142,7 +142,25 @@ Table:
 ```sql
 products
 ```
+---
 
+## 📸 Screenshots
+
+### Dashboard Overview
+
+![Dashboard](https://raw.githubusercontent.com/kishor047/amazon-product-analytics-dashboard/main/dashboard.png)
+
+---
+
+### Analytics Dashboard
+
+![Analytics](https://raw.githubusercontent.com/kishor047/amazon-product-analytics-dashboard/main/analytics%20dashboard.png)
+
+---
+
+### Data Table View
+
+![Data Table](https://raw.githubusercontent.com/kishor047/amazon-product-analytics-dashboard/main/data.png)
 ---
 
 ## Technology Stack

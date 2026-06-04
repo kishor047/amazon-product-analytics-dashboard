@@ -2,7 +2,12 @@
 
 from datetime import datetime
 from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
+app = FastAPI()
+
+# CORS section here
 import requests
 from bs4 import BeautifulSoup
 

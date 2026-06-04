@@ -5,11 +5,16 @@ from database import save_csv, save_to_sqlite, get_analytics
 from fastapi.responses import FileResponse
 import os
 
+
 app = FastAPI()
+
+origins = [
+    "https://amazon-product-analytics-dashboard-1vki0vd4w.vercel.app",
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

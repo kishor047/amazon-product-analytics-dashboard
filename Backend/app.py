@@ -5,14 +5,20 @@ from database import save_csv, save_to_sqlite, get_analytics
 from fastapi.responses import FileResponse
 import os
 
+# Create FastAPI app FIRST
+app = FastAPI()
 
+# CORS Configuration
 app.add_middleware(
     CORSMiddleware,
     allow_origin_regex=r"https://.*\.vercel\.app",
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Global storage
+extracted_products = []
 # Global in-memory storage for simple demonstration
 extracted_products = []
 

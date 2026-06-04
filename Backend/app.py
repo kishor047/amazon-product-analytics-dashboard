@@ -6,20 +6,13 @@ from fastapi.responses import FileResponse
 import os
 
 
-app = FastAPI()
-
-origins = [
-    "https://amazon-product-analytics-dashboard-1vki0vd4w.vercel.app",
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 # Global in-memory storage for simple demonstration
 extracted_products = []
 
